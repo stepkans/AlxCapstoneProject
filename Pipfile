@@ -7,6 +7,9 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 python-decouple = "*"
+drf-yasg = "*"
+setuptools = "*"
+drf-spectacular = "*"
 
 [dev-packages]
 

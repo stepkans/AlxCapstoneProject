@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     ## 3rd Party Apps
     'rest_framework',
+    'drf_yasg',
+    'drf_spectacular', 
     
     ## Local Apps
     'posts.apps.PostsConfig',
@@ -122,6 +124,23 @@ USE_TZ = True
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+        ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+        ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema", # new
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Iloomon Olosho Le Maa API",
+    "DESCRIPTION": "A simple Maa community blog",
+    "VERSION": "1.0.0",
+    # OTHER SETTINGS
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
