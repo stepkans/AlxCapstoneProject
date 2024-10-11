@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .views import BlogPostViewSet, CategoryViewSet,TagViewSet
 
 router = DefaultRouter()
-router.register('posts', BlogPostViewSet)
+router.register('posts', BlogPostViewSet, basename='post')
 router.register('categories', CategoryViewSet)
 router.register('tags', TagViewSet)
 

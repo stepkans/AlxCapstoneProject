@@ -10,6 +10,8 @@ python-decouple = "*"
 drf-yasg = "*"
 setuptools = "*"
 drf-spectacular = "*"
+djangorestframework-simplejwt = "*"
+black = "*"
 
 [dev-packages]
 
