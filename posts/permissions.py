@@ -19,4 +19,4 @@ class IsAuthorOrReadOnly(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
         # Only allow the author of the post to edit or delete it.
-        return obj.author == request.user
+        return request.user == obj.author
